@@ -16,6 +16,24 @@
     Polymer({
       is: 'spark-lines',
 
+      data:{
+        type:Array,
+        value:[],
+        notify:true,
+        reflectToAtrribute:true,
+        observer: _dataChanged
+      },
+
+      path:{
+        type:Array,
+        value:[],
+        readonly:true
+      }
+
+      _dataChanged:function(data){
+
+      }
+
       created: function() {
         console.log(this.localName + '#' + this.id + ' was created');
       },
